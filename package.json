@@ -1,0 +1,29 @@
+{
+	"name": "eyecandy-supply-mern",
+	"version": "1.0.0",
+	"description": "Eye Candy Supply Website MERN",
+	"main": "server.js",
+	"type": "module",
+	"scripts": {
+		"start": "node server/server",
+		"server": "nodemon server/server",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"data:import": "node server/seeder",
+		"data:destroy": "node server/seeder -d"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fullstackcaveman/eyecandy-supply-mern.git"
+	},
+	"author": "FullStackCaveman",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/fullstackcaveman/eyecandy-supply-mern/issues"
+	},
+	"homepage": "https://github.com/fullstackcaveman/eyecandy-supply-mern#readme",
+	"devDependencies": {
+		"concurrently": "^5.3.0",
+		"nodemon": "^2.0.6"
+	}
+}
